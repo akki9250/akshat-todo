@@ -5,8 +5,7 @@ const {db, Todos, notes} = require('./db');
 app.use(express.json());
 
 app.use('/', express.static(__dirname + '/public'));
-
-app.set( 'port', ( process.env.PORT || 5000 ));
+ app.set( 'port', ( process.env.PORT || 6000 ));
 
 db.sync().then(
     () => app.listen(app.get( 'port' ))

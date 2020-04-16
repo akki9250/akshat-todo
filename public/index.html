@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script async defer src = "script.js"></script>
+    <script async defer src = "jquery.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Nagarro Tasks</title>
+</head>
+<body onload = "getData()">
+    <style>
+        body {
+          background-image: url('akki1.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed; 
+          background-size: 100% 100%;
+        }
+        </style>
+    <p><u><h1 align = "center">Nagarro Task manager</h1></u></p>
+    <br/>
+    <label>Title : <span style = "color : red">*</span> : </label>
+    <input type = "text" id = "title">
+    <br/>
+    <label>Description : </label>
+    <input type = "text" id = "description">
+    <br/>
+    <label>Due Date :<span style = "color : red">*</span> </label>
+    <input type = "date" id = "due">
+    <br/>
+    <label>Priority :<span style = "color : red">*</span> </label>
+    <select id="priority">
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+    </select>
+
+    <br/>
+    <label>Note : </label>
+    <input type = "text" id = "note" style="width : 70%">
+    <center><input type="button" value = "Add New Task" id = "btn"></center>
+    <p id = 'err'></p>
+
+    <center>
+    <label>Sort by:<span style = "color : red">*</span> </label>
+    <select id="sort">
+        <option value="due">Due date</option>
+        <option value="priority">Priority</option>
+        <option value="status">Status</option>
+    </select>
+    </center>
+
+    <br/>
+    
+    <table id = "table"><table>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class = 'editHeader'>
+                <span class="close">&times;</span>
+            </div>
+            <div style = "padding : 20px;">
+                <label>Title<span style = "color : red">*</span> : </label>
+                <input type = "text" id = "editTitle" style = "color : gray" readonly>
+                <label>Description : </label>
+                <input type = "text" id = "editDescription" style = "color : gray" readonly>
+                <br/>
+                <label>Due :<span style = "color : red">*</span> </label>
+                <input type = "Date" id = "editDue">
+                <label>Priority:<span style = "color : red">*</span> </label>
+                <select id="editPriority">
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    <option value="low">Low</option>
+                </select>
+                <label class="container">Completed : 
+                    <input type="checkbox" id = "editStatuss">
+                    <span class="checkmark"></span>
+                </label>
+                <input type="button" value = "Save" id = "saveBtn">
+            </div>
+        </div>
+          
+    </div>
+    
+</body>
+<footer>
+    <p>Posted by: Akshat Jain</p>
+    <p>Contact information: <a href="mailto:akkijain8700@gmail.com">
+    akkijain8700@gmail.com</a>.</p>
+  </footer> 
+
+</html>
